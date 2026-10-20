@@ -1129,7 +1129,8 @@ def register_tools(app):
 
         Garmin replaces the whole workout, so workout_data must be the
         complete workout, not just the changed fields. Start from
-        get_workout_by_id's output or build it the same way as for
+        get_workout_by_id(workout_id, raw=True) (the default summary leaves
+        fields out and is not accepted here) or build it the same way as for
         upload_workout; the same structure, target-value and end-condition
         rules apply (see upload_workout). Pace targets are in m/s, not
         min/km (5:00/km = 3.333 m/s).
